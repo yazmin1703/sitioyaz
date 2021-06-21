@@ -1,2 +1,0 @@
-# sitioyaz
-Trabajo Escolar

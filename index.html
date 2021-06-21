@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <script type="text/javascript">
+      function changePage(page, option){
+        var frame = document.getElementById('idFrame');
+        frame.src = page;
+      }
+    </script>
+    <style type="text/css">
+      .header {
+        overflow: hidden;
+        background-color: #f1f1f1;
+        padding: 20px 10px;
+      }
+
+      .header a {
+        float: left;
+        color: black;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px; 
+        line-height: 25px;
+        border-radius: 4px;
+      }
+
+      .header a.logo {
+        font-size: 25px;
+        font-weight: bold;
+      }
+
+      .header a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      .header a.active {
+        background-color: dodgerblue;
+        color: white;
+      }
+
+      .header-right {
+        float: right;
+        top: 25px;
+        position: relative;
+        text-align: right;
+      }
+
+      /*CSS  NAV LEFT*/
+      .sidenav {
+        height: 100%;
+        width: 160px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #a1cef9;
+        overflow-x: hidden;
+        padding-top: 20px;
+        font-family: "Comic sans MS"
+      }
+
+      .sidenav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        color:#ffffff;
+        display: block;
+        cursor: pointer;
+      }
+
+      .sidenav a:hover {
+        color: #6f6c6c;
+      }
+
+      .main {
+        margin-left: 151px; /* Same as the width of the sidenav */
+        font-size: 28px; /* Increased text to enable scrolling */
+        padding: 0px 10px;
+      }
+
+      .frames{
+        width: 101%;
+        margin-left: -10px;
+        height: 430px;
+      }
+
+      @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+      }
+    </style>
+</head> 
+  <body>
+    <!--Header-->
+    <div class="header" style="background-color: #c6aacc;padding-left: 180px;margin-top: -8px;">
+      <img src="images/logo1.jpg" alt="Logo" height="125"/>
+      <div class="header-right" style="font-family:cursive;">
+        <span><font face = "Comic sans MS" size =" 3">Escuela Preparatoria Oficial Num. 59</font></span><br/>
+        <span><font face = "Comic sans MS" size =" 3">Yazmin Demetrio Ovando</font></span><br/>
+        <span><font face = "Comic sans MS" size =" 3">Grado: 3, Grupo: I</font></span>
+      </div>
+    </div>
+
+    <!--Nav Left-->
+    <div class="sidenav">
+      <!--<a href="#about" style="background-image: url(images/paginaWeb.jpg);background-size: 160px 40px;">Paginas Web</a>-->
+      <a onclick="changePage('paginasWeb.html', this)">Paginas Web</a>
+      <a onclick="changePage('historiaUniversal.html', this)">Historia Universal</a>
+      <a onclick="changePage('ecologiaMedio.html', this)">Ecologia y Medio ambiente - Salud Integral</a>
+      <a onclick="changePage('disenoDigital.html', this)">Diseño Digital</a>
+      <a onclick="changePage('derecho.html', this)">Derecho</a>
+      <a onclick="changePage('matematicas.html', this)">Matematicas</a>
+      <a onclick="changePage('ingles.html', this)">Ingles</a>
+      <a onclick="changePage('filosofia.html', this)">Filosofia</a>
+    </div>
+
+    <div class="main">
+      <iframe class="frames" id="idFrame" src="paginasWeb.html" />
+    </div>
+  </body>
+</html>
